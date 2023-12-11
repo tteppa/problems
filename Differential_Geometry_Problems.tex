@@ -62,7 +62,7 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 
 	\item Let $M$ be a compact manifold, and suppose that $\omega_0$, $\omega_1$ are two volume forms on $M$ inducing the same orientation and volume. Show that there exists a diffeomorphism $f\colon M \to M$ such that $f^*\omega_1 = \omega_0$. (Hint: Consider $\omega_t = (1 - t)\omega_0 + t\omega_1$.) 
 
-	\item Let $E$ be a vector bundle over a manifold $M$, and let $X$ be the Euler vector field on $E$. (The flow of $X$ is given by multiplication by $e^t$.) Let $F\colon E \to E$ be a smooth mapping for which $X$ is $F$-related to itself. Prove that $F$ is actually a bundle map. 
+	\item Let $E \to M$ and $F \to N$ be vector bundles, and let $\varphi\colon E \to F$ be a smooth map. Suppose that the Euler vector field $V^E$ of $E$ is $\varphi$-related to the Euler vector field $V^F$ of $F$. Prove that $\varphi$ is actually a bundle homomorphism.
 
 	\item Use the previous problem to show that a diffeomorphism of a cotangent bundle which preserves the tautological $1$-form is actually a cotangent lift.
 
@@ -72,9 +72,11 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 	\]
 	is a bijection. (Do it in the compact case first.)
 
-	\item With the previous problem in mind, construct a bijection between $TM$ and $\mathrm{Hom}_{\mathrm{alg}}(C^\infty(M), \mathbb{R}[\varepsilon]/(\varepsilon^2))$. What if $\mathbb{R}[\varepsilon]/(\varepsilon^2)$ is replaced with $\mathbb{R}[\varepsilon]/(\varepsilon^{n+1})$? What if the domain and range of the set of algebra homomorphisms are swapped?
+	\item With the previous problem in mind, construct a bijection between $TM$ and $\mathrm{Hom}_{\mathrm{alg}}(C^\infty(M), \mathbb{R}[\varepsilon]/(\varepsilon^2))$. What if $\mathbb{R}[\varepsilon]/(\varepsilon^2)$ is replaced with $\mathbb{R}[\varepsilon]/(\varepsilon^{n+1})$? What if the domain and range of the set of algebra homomorphisms are swapped? (If you know about jets, then give your answer in terms of those. If not, then at least try to use the phrase "Taylor expansion" in your answer.)
 
 	\item Let $G$ be a Lie group acting by isometries on a Riemannian manifold. Show that each component of its fixed point set is an embedded, totally geodesic submanifold.
+
+	\item Suppose that a Lie group $G$ acts isometrically on a connected $n$-manifold $M$. Show that $\dim G \leq n + n(n - 1)/2$, and give two examples where the bound is attained.
 
 	\item Let $G$ be a Lie group admitting a bi-invariant metric $g$. 
 	\begin{enumerate}[(a)]
@@ -96,7 +98,7 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 	\[
 		A(X, Y) = A_XY = \nabla'_XY - \nabla_XY.
 	\]
-	Show that $A$ is a $(1, 2)$-tensor. Now, by curring, we can identify $A$ with an $\mathrm{End}(TM)$-valued $1$-form on $M$ given by $X \mapsto A_X$.
+	Show that $A$ is a $(1, 2)$-tensor. Now, by currying, we can identify $A$ with an $\mathrm{End}(TM)$-valued $1$-form on $M$ given by $X \mapsto A_X$.
 
 	The flat connection $\nabla$ induces a connection in $\mathrm{End}(TM)$, given by 
 	\[
