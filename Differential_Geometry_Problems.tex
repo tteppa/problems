@@ -1,0 +1,111 @@
+\documentclass[11pt]{article} %default 11pt
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amssymb, amsfonts, tikz-cd}
+\usepackage[left = 3.5cm, right = 3.5cm]{geometry} %default 3.5/3.5
+\usepackage[shortlabels]{enumitem}
+
+\begin{document}
+
+Assume that everything is smooth unless the contrary is explicitly stated.
+
+\begin{enumerate}
+	\item Let $M$ be a connected manifold and let $f\colon M \to M$ be a map such that $f \circ f = f$. Show that $f(M)$ is an embedded submanifold of $M$. 
+
+	\item Let $M$ be a manifold and let $f\colon M \to M$ be a map such that $f \circ f = \mathrm{id}_M$. Show that $f(M)$ is an embedded submanifold of $M$.
+
+	\item Show that the action of the diffeomorphism group of a connected manifold is transitive. (Hint: Show that, if $p$ and $q$ are in the open unit ball of $\mathbb{R}^n$, then there exists a compactly-supported vector field whose flow takes $p$ to $q$.)
+
+	\item Let $X$ and $Y$ be vector fields on a smooth manifold $M$, with flows denoted by $\varphi_t$ and $\psi_t$, respectively. Fix a point $p$ of $M$, and, whenever it makes sense, define
+	\[
+		c(t) = (\psi_t \circ \varphi_t \circ \psi_{-t} \circ \varphi_{-t})(p).
+	\]
+	Show that $c'(0) = 0$, and deduce from this that $f \mapsto (f \circ c)''(0)$ defines an element of $T_pM$. Prove that this element is precisely $2[X, Y]_p$.
+
+	\item Let $D$ be a distribution on a manifold $M$, and let $X$ be a (locally defined) vector field on $M$ with flow $\varphi_t$. Show that the following are equivalent.
+	\begin{enumerate}[(i)]
+		\item For all $p$ in $M$ and $t$ for which it makes sense, $d(\varphi_t)_p(D_p) = D_{\varphi_t(p)}$.
+		\item $\mathcal{L}_X$ takes local sections of $D$ to local sections of $D$.
+		\item $\mathcal{L}_X$ takes local annihilating forms for $D$ to local annihilating forms for $D$.
+	\end{enumerate}
+	If any of these hold, then we say that $X$ is an \emph{infinitesimal symmetry} of $D$.
+
+	\item Let $\pi\colon M \to M'$ be a surjective submersion with connected fibres.
+	\begin{enumerate}[(a)]
+		\item Show that $\ker d\pi$ is an involutive distribution on $M$, and describe the corresponding foliation.
+		\item Let $D$ be a distribution on $M$ containing $\ker d\pi$, and suppose that every local section of $\ker d\pi$ is also an infinitesimal symmetry of $D$. Show that there exists a unique distribution $D'$ on $M'$ such that $D'_{\pi(p)} = d\pi_p(D_p)$ for each $p$ in $M$. (The next part of the problem outlines the proof of smoothness.)
+
+		\item Show that, for each $p$ in $M$, it is possible to find an open neighbourhood $U$ of $p$, local sections $Y_1, \dots, Y_r$ of $D$ on $U$, and a local \emph{frame} $Y_1', \dots, Y_r'$ of $D'$ on $\pi(U)$ such that each $Y_i$ is $\pi$-related to $Y_i'$. Deduce from this that $D'$ is smooth, and involutive if $D$ is. 
+	\end{enumerate}
+
+	\item Let $\pi\colon M \to M'$ be a surjective submersion with connected fibres, and let $\omega$ be a $k$-form on $M$. Show that $\omega$ is the pullback of a $k$-form on $M'$ by $\pi$, if and only if $i_X\omega = 0$ and $\mathcal{L}_X\omega = 0$ for every section $X$ of $\ker d\pi$. Interpret this geometrically and give a counterexample if the assumption that the fibres are connected is dropped
+
+	\item Consider the $(n - 1)$-form $\omega$ on $\mathbb{R}^n \setminus \{0\}$ defined by 
+	\[
+		\omega = \frac{1}{|x|^n} \sum_{i=1}^n (-1)^{i - 1} x^i \, dx^1 \wedge \cdots \wedge \widehat{dx^i} \wedge \cdots \wedge dx^n.
+	\]
+	\begin{enumerate}[(a)]
+		\item Show that $\omega|_{S^{n-1}}$ is the standard volume form for $S^{n-1}$.
+		\item Show that $\omega$ is closed, but not exact.
+	\end{enumerate}
+
+	\item Consider $\mathbb{R}^{2n}$ with the standard coordinates denoted by $x^1,y^1,\dots,x^n,y^n$, and define $\omega$ by 
+	\[
+		\omega = \sum_{i=1}^n \left(-y^i \, dx^i + x^i \, dy^i \right).
+	\]
+	Show that $\omega$ restricts to a nowhere-vanishing $1$-form on $S^{2n - 1}$. Compare this with the easy direction of the hairy ball theorem.
+
+	\item Let $\omega$ be a volume form on a manifold $M$. Show that, for each vector field $X$ on $M$, there exists a unique function $f$ on $M$ such that $\mathcal{L}_X\omega = f\omega$. Give the local coordinate expression for $f$ in terms of $X$ and $\omega$. What happens if $\omega$ is the standard volume form on $\mathbb{R}^n$? 
+
+	\item Let $M$ be a compact manifold, and suppose that $\omega_0$, $\omega_1$ are two volume forms on $M$ inducing the same orientation and volume. Show that there exists a diffeomorphism $f\colon M \to M$ such that $f^*\omega_1 = \omega_0$. 
+
+	\item Let $E$ be a vector bundle over a manifold $M$, and let $X$ be the Euler vector field on $E$. (The flow of $X$ is given by multiplication by $e^t$.) Let $F\colon E \to E$ be a smooth mapping for which $X$ is $F$-related to itself. Prove that $F$ is actually a bundle map. 
+
+	\item Use the previous problem to show that a diffeomorphism of a cotangent bundle which preserves the tautological $1$-form is actually a cotangent lift.
+
+	\item (Milnor's exercise) For any manifold $M$, show that 
+	\[
+		M \to \mathrm{Hom}_{\mathrm{alg}}(C^\infty(M), \mathbb{R}), \qquad p \mapsto \mathrm{ev}_p
+	\]
+	is a bijection. (Do it in the compact case first.)
+
+	\item With the previous problem in mind, construct a bijection between $TM$ and $\mathrm{Hom}_{\mathrm{alg}}(C^\infty(M), \mathbb{R}[\varepsilon]/(\varepsilon^2))$. What if $\mathbb{R}[\varepsilon]/(\varepsilon^2)$ is replaced with $\mathbb{R}[\varepsilon]/(\varepsilon^{n+1})$? What if the domain and range of the set of algebra homomorphisms are swapped?
+
+	\item Let $G$ be a Lie group acting by isometries on a Riemannian manifold. Show that each component of its fixed point set is an embedded, totally geodesic submanifold.
+
+	\item Let $G$ be a Lie group admitting a bi-invariant metric $g$. 
+	\begin{enumerate}[(a)]
+		\item Show that the curvature tensor $R$ acts on left-invariant vector fields by 
+		\[
+			R(X, Y)Z = \frac{1}{4}[Z,[X,Y]].
+		\]
+
+		\item Show that 
+		\[
+			\mathrm{sec}(X, Y) = \frac{1}{4}\left|[X,Y]\right|^2
+		\]
+		for every pair $X,Y$ of orthonormal left-invariant vector fields, and conclude that, in the connected case, $G$ is flat if and only if it is abelian.
+	\end{enumerate}
+	
+	\item Use the Gauss-Bonnet theorem and the previous problem to show that every compact, connected Lie group of dimension two is a torus.
+
+	\item (Credit to Ibsen on Discord for this one.) Consider a manifold $M$ with a connection $\nabla'$. Let $\nabla$ be the standard flat connection in a local coordinate patch $U$; going forward, we will assume that $M = U$. Define a map $A\colon \mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M)$ by 
+	\[
+		A(X, Y) = A_XY = \nabla'_XY - \nabla_XY.
+	\]
+	Show that $A$ is a $(1, 2)$-tensor. Now, by curring, we can identify $A$ with an $\mathrm{End}(TM)$-valued $1$-form on $M$ given by $X \mapsto A_X$.
+
+	The flat connection $\nabla$ induces a connection in $\mathrm{End}(TM)$, given by 
+	\[
+		\nabla_X(T)(Z) = \nabla_X(T(Z)) - T(\nabla_X Z).
+	\]
+	This allows us to differentiate $A$ to get an $\mathrm{End}(TM)$-valued $2$-form $dA$ on $M$ given by 
+	\[
+		(dA)(X, Y) = \nabla_X A_Y - \nabla_Y A_X - A_{[X, Y]}.
+	\]
+	$dA$ is not quite the curvature, but we can add a "correction term" $A \wedge A$ to it to get the curvature tensor. (This is defined by the typical matrix multiplication expression, but with wedge products in the sum.) Prove this, and interpret the result geometrically using Stokes's theorem.
+
+%	\item (Another one by Ibsen.) Consider $\mathbb{R}^3$ with the standard contact structure $\theta = dz - y \, dx$.
+
+\end{enumerate}
+
+\end{document}
