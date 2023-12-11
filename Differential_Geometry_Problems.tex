@@ -13,7 +13,7 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 
 	\item Let $M$ be a manifold and let $f\colon M \to M$ be a map such that $f \circ f = \mathrm{id}_M$. Show that $f(M)$ is an embedded submanifold of $M$.
 
-	\item Show that the action of the diffeomorphism group of a connected manifold is transitive. (Hint: Show that, if $p$ and $q$ are in the open unit ball of $\mathbb{R}^n$, then there exists a compactly-supported vector field whose flow takes $p$ to $q$.)
+	\item Show that the diffeomorphism group of a connected manifold acts transitively.
 
 	\item Let $X$ and $Y$ be vector fields on a smooth manifold $M$, with flows denoted by $\varphi_t$ and $\psi_t$, respectively. Fix a point $p$ of $M$, and, whenever it makes sense, define
 	\[
@@ -39,7 +39,7 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 
 	\item Let $\pi\colon M \to M'$ be a surjective submersion with connected fibres, and let $\omega$ be a $k$-form on $M$. Show that $\omega$ is the pullback of a $k$-form on $M'$ by $\pi$, if and only if $i_X\omega = 0$ and $\mathcal{L}_X\omega = 0$ for every section $X$ of $\ker d\pi$. Interpret this geometrically and give an example to show that the conclusion is false if we drop the assumption that $\pi$ has connected fibres.
 
-	\item Let $f\colon M \to N$ be a map which is transverse to the leaves of a foliation $\mathcal{F}$ on $N$. Show that the connected components of the pre-images of the leaves of $\mathcal{F}$ under $f$ give rise to a foliation on $M$. (To get a flat chart, inspect the proof of the transversality theorem.) Specialize to the intersection of two foliations.
+	\item Let $f\colon M \to N$ be a map which is transverse to the leaves of a foliation $\mathcal{F}$ on $N$. Show that the connected components of the pre-images of the leaves of $\mathcal{F}$ under $f$ give rise to a foliation on $M$. Specialize to the intersection of two foliations.
 
 	\item Let $M$ be a manifold with a foliation $\mathcal{F}$. The \emph{leaf space} $M/\mathcal{F}$ is defined to be the set of leaves of $\mathcal{F}$ given the quotient topology. Show that the quotient map is open. Give an example to show that the quotient space need not be Hausdorff.
 
@@ -62,9 +62,9 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 
 	\item Let $M$ be a compact manifold, and suppose that $\omega_0$, $\omega_1$ are two volume forms on $M$ inducing the same orientation and volume. Show that there exists a diffeomorphism $f\colon M \to M$ such that $f^*\omega_1 = \omega_0$. (Hint: Consider $\omega_t = (1 - t)\omega_0 + t\omega_1$.) 
 
-	\item Let $E \to M$ and $F \to N$ be vector bundles, and let $\varphi\colon E \to F$ be a smooth map. Suppose that the Euler vector field $V^E$ of $E$ is $\varphi$-related to the Euler vector field $V^F$ of $F$. Prove that $\varphi$ is actually a bundle homomorphism.
+	\item Given a vector bundle $E \to M$, we define the \emph{Euler vector field} $V^E$ on $E$ to be the infinitesimal generator of the flow $(t, v) \mapsto e^t v$. Suppose that $E \to M$ and $F \to N$ are vector bundles, and that $\varphi\colon E \to F$ is a smooth map. Show that $\varphi$ is a vector bundle morphism if and only if $V^E$ is $\varphi$-related to $V^F$.
 
-	\item Use the previous problem to show that a diffeomorphism of a cotangent bundle which preserves the tautological $1$-form is actually a cotangent lift.
+	\item Let $M$ and $N$ be manifolds, and denote by $\lambda^M$ and $\lambda^N$ the tautological $1$-forms on $T^*M$ and $T^*N$, respectively. Use the previous problem to show that a diffeomorphism $F\colon T^*M \to T^*N$ is the cotangent lift of a diffeomorphism $f\colon M \to N$ if and only if $F^*\lambda^N = \lambda^M$.
 
 	\item (Milnor's exercise) For any manifold $M$, show that 
 	\[
