@@ -94,6 +94,14 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 	
 	\item Use the Gauss-Bonnet theorem and the previous problem to show that every compact, connected Lie group of dimension two is a torus.
 
+	\item Let $G$ be a Lie group with Lie algebra $\mathfrak{g}$. We define a $\mathfrak{g}$-valued $1$-form $\theta$ on $G$ by $\theta(v) = d(L_{g^{-1}})_g(v)$ for $v$ in $T_gG$. ($\theta$ is known as the \emph{Maurer-Cartan form}.) Show that 
+	\[
+		d\theta + \frac{1}{2} [\theta, \theta] = 0,
+	\]
+	where the bracket on $\mathfrak{g}$-valued $1$-forms is given by 
+	\[
+			[\omega,\eta](X, Y) = [\omega(X),\eta(Y)] - [\omega(Y), \eta(X)].
+	\]
 	\item (Credit to Ibsen on Discord for this one.) Consider a manifold $M$ with a connection $\nabla'$. Let $\nabla$ be the standard flat connection in a local coordinate patch $U$; going forward, we will assume that $M = U$. Define a map $A\colon \mathfrak{X}(M) \times \mathfrak{X}(M) \to \mathfrak{X}(M)$ by 
 	\[
 		A(X, Y) = A_XY = \nabla'_XY - \nabla_XY.
@@ -108,9 +116,8 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 	\[
 		(dA)(X, Y) = \nabla_X A_Y - \nabla_Y A_X - A_{[X, Y]}.
 	\]
-	$dA$ is not quite the curvature, but we can add a "correction term" $A \wedge A$ to it to get the curvature tensor. (This is defined by the typical matrix multiplication expression, but with wedge products in the sum.) Prove this, and interpret the result geometrically using Stokes's theorem.
+	$dA$ is not quite the curvature, but we can add a "correction term" $A \wedge A$ to it to get the curvature tensor. (This is defined by the typical matrix multiplication expression, but with wedge products in the sum.) Prove this, and interpret the result geometrically using Stokes's theorem. Compare with the previous problem.
 
-%	\item (Another one by Ibsen.) Consider $\mathbb{R}^3$ with the standard contact structure $\theta = dz - y \, dx$.
 
 \end{enumerate}
 
