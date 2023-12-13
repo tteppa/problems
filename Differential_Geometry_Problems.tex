@@ -17,9 +17,9 @@ Assume that everything is smooth unless the contrary is explicitly stated.
 
 	\item Let $X$ and $Y$ be vector fields on a smooth manifold $M$, with flows denoted by $\varphi_t$ and $\psi_t$, respectively. Fix a point $p$ of $M$, and, whenever it makes sense, define
 	\[
-		c(t) = (\psi_t \circ \varphi_t \circ \psi_{-t} \circ \varphi_{-t})(p).
+			c(t) = (\psi_{-t} \circ \varphi_{-t} \circ \psi_{t} \circ \varphi_{t})(p).
 	\]
-	Show that $c'(0) = 0$, and deduce from this that $f \mapsto (f \circ c)''(0)$ defines an element of $T_pM$. Prove that this element is precisely $2[X, Y]_p$. (I need to double-check the sign and factor of $2$ on this one.)
+	Show that $c'(0) = 0$, and deduce from this that $f \mapsto (f \circ c)''(0)$ defines an element of $T_pM$. Prove that this element is precisely $2[X, Y]_p$. 
 
 	\item Let $D$ be a distribution on a manifold $M$, and let $X$ be a (locally defined) vector field on $M$ with flow $\varphi_t$. Show that the following are equivalent.
 	\begin{enumerate}[(i)]
